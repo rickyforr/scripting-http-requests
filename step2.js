@@ -4,15 +4,12 @@ console.log('required https module')
 
 function getAndPrintHTML () {
 
-  var requestOptions = {
+
+var requestOptions = {
     host: 'sytantris.github.io',
     path: '/http-examples/step2.html'
   };
 
-  var requestOptions = {
-    host: 'sytantris.github.io',
-    path: '/http-examples/step1.html'
-};
 
 // notice that https.get takes a callback with one parameter -
 // response, which is a Stream that represents the HTTP response
@@ -24,7 +21,7 @@ https.get(requestOptions, function (response) {
 var storeChunk = " ";
   // the callback is invoked when a `data` chunk is received. response.on on event 'data' do something
   response.on('data', function (data) {
-    storeChunk += data.toString();
+  storeChunk += data.toString();
 
   });
 
@@ -36,5 +33,6 @@ response.on('end', function() {
 });
 }
 
-getAndPrintHTML ()
 
+
+getAndPrintHTML ()
