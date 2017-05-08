@@ -1,11 +1,10 @@
 var https = require('https');
 console.log('required https module')
 
-function getHTML (options, callback) {
+module.exports = function getHTML (options, callback) {
 
   /* Add your code here */
-options = requestOptions
-
+var requestOptions = options;
 
 // notice that https.get takes a callback with one parameter -
 // response, which is a Stream that represents the HTTP response
@@ -21,8 +20,9 @@ var storeChunk = " ";
 
   });
 
-response.on('end', function(printHTML) {
-    console.log('Response stream complete.', storeChunk);
+response.on('end', function(printUpperCase) {
+     console.log(storeChunk.toUpperCase());
+
   });
 
 
@@ -30,13 +30,3 @@ response.on('end', function(printHTML) {
 
 }
 
-function printHTML (html) {
-  console.log(html);
-}
-
-var requestOptions = {
-  host: 'sytantris.github.io',
-  path: '/http-examples/step4.html'
-};
-
-getHTML();

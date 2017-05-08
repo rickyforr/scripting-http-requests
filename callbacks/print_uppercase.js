@@ -7,9 +7,12 @@ var requestOptions = {
 
 function printUpperCase (html) {
 
-  html.toUpperCase();
+  /* Write your code here! */
+ console.log(storeChunk.toUpperCase());
+  }
 
-}
+
 
 getHTML(requestOptions, printUpperCase);
+
 
