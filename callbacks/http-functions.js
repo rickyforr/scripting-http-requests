@@ -1,7 +1,7 @@
 var https = require('https');
 console.log('required https module')
 
-module.exports = function getHTML (options, callback) {
+function getHTML (options, callback) {
 
   /* Add your code here */
 options = requestOptions
@@ -39,3 +39,4 @@ var requestOptions = {
   path: '/http-examples/step4.html'
 };
 
+getHTML();
